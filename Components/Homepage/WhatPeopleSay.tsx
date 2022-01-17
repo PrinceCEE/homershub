@@ -11,7 +11,7 @@ const WhatPeopleSay = () => {
     <VStack>
       <Text>what people say about us</Text>
       <Flex>
-        <WhatPeopleSayCard
+        {/* <WhatPeopleSayCard
           image={jane}
           alt="jane moore"
           name="jane moore"
@@ -28,7 +28,7 @@ const WhatPeopleSay = () => {
           alt="mike alex"
           name="mike alex"
           content="Homershub offers the best services you can think of. Tested and trusted"
-        />
+        /> */}
       </Flex>
       <Flex>
         <Box>
