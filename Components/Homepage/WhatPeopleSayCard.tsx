@@ -1,9 +1,9 @@
-import { VStack, Text } from "@chakra-ui/react";
+import { VStack, Text, Avatar } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 
 interface Props {
-  image: StaticImageData;
+  image: string;
   name: string;
   content: string;
   alt: string;
@@ -11,9 +11,19 @@ interface Props {
 
 const WhatPeopleSayCard: React.FC<Props> = ({ image, alt, name, content }) => {
   return (
-    <VStack>
-      <Image src={image} alt={alt} />
-      <Text>{name}</Text>
+    <VStack
+      gap={2}
+      bgColor={"white"}
+      border="2px solid #CACACA"
+      px={4}
+      py={8}
+      w="33%"
+      textAlign={"center"}
+    >
+      <Avatar src={image} alt={alt} />
+      <Text textTransform={"capitalize"} fontWeight={"bold"}>
+        {name}
+      </Text>
       <Text>{content}</Text>
     </VStack>
   );
