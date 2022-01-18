@@ -6,44 +6,61 @@ import LaundryIcon from "../Icons/LaundryIcon";
 import ElectricalRepairsIcon from "../Icons/ElectricalRepairsIcon";
 import ShoppingIcon from "../Icons/ShoppingIcon";
 import CleaningIcon from "../Icons/CleaningIcon";
+import Container from "../Container";
 
 const OurServices = () => {
   return (
-    <Box>
-      <Text>our services</Text>
-      <SimpleGrid>
-        <Service
-          icon={<PaintingIcon />}
-          title="painting"
-          content="We offer painting services at a very affordable price. We are always available and ready to deliver."
-        />
-        <Service
-          icon={<CookingIcon />}
-          title="cooking"
-          content="We offer cooking services at a very affordable price. We are always available and ready to deliver."
-        />
-        <Service
-          icon={<LaundryIcon />}
-          title="laundry"
-          content="We offer laundry services at a very affordable price. We are always available and ready to deliver."
-        />
-        <Service
-          icon={<ElectricalRepairsIcon />}
-          title="electrical repairs"
-          content="We offer electrical repair services at a very affordable price. We are always available and ready to deliver."
-        />
-        <Service
-          icon={<ShoppingIcon />}
-          title="shopping"
-          content="We offer shopping services at a very affordable price. We are always available and ready to deliver."
-        />
-        <Service
-          icon={<CleaningIcon />}
-          title="cleaning"
-          content="We offer cleaning services at a very affordable price. We are always available and ready to deliver."
-        />
-      </SimpleGrid>
-    </Box>
+    <Container my="10">
+      <Box>
+        <Text
+          textAlign="center"
+          my="8"
+          fontSize="24px"
+          textTransform="uppercase"
+          fontWeight="bold"
+        >
+          our services
+        </Text>
+        <SimpleGrid
+          columns={2}
+          spacingX={12}
+          spacingY={8}
+          maxW="760px"
+          mx="auto"
+        >
+          <Service
+            icon={<PaintingIcon boxSize="10" />}
+            title="painting"
+            content="We offer painting services at a very affordable price. We are always available and ready to deliver."
+          />
+          <Service
+            icon={<CookingIcon boxSize="10" />}
+            title="cooking"
+            content="We offer cooking services at a very affordable price. We are always available and ready to deliver."
+          />
+          <Service
+            icon={<LaundryIcon boxSize="10" />}
+            title="laundry"
+            content="We offer laundry services at a very affordable price. We are always available and ready to deliver."
+          />
+          <Service
+            icon={<ElectricalRepairsIcon boxSize="10" />}
+            title="electrical repairs"
+            content="We offer electrical repair services at a very affordable price. We are always available and ready to deliver."
+          />
+          <Service
+            icon={<ShoppingIcon boxSize="10" />}
+            title="shopping"
+            content="We offer shopping services at a very affordable price. We are always available and ready to deliver."
+          />
+          <Service
+            icon={<CleaningIcon boxSize="10" />}
+            title="cleaning"
+            content="We offer cleaning services at a very affordable price. We are always available and ready to deliver."
+          />
+        </SimpleGrid>
+      </Box>
+    </Container>
   );
 };
 

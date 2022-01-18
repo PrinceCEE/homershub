@@ -9,10 +9,26 @@ interface Props {
 
 const Service: React.FC<Props> = ({ icon, title, content }) => {
   return (
-    <VStack>
+    <VStack
+      borderRadius="20px"
+      p="10"
+      boxShadow=" 0px 0.5px 4px rgba(0, 0, 0, 0.25)"
+      gap={8}
+    >
       {icon}
-      <Text>{title}</Text>
-      <Text>{content}</Text>
+      <VStack gap={2}>
+        <Text
+          textAlign={"center"}
+          color={"#000000"}
+          textTransform={"uppercase"}
+          fontWeight={"bold"}
+        >
+          {title}
+        </Text>
+        <Text textAlign={"center"} color={"#717E95"}>
+          {content}
+        </Text>
+      </VStack>
     </VStack>
   );
 };
