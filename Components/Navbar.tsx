@@ -1,4 +1,5 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import { css } from "@emotion/react";
 import HomeIcon from "./Icons/HomeIcon";
 import Button from "./Button";
@@ -13,6 +14,8 @@ const style = css`
 `;
 
 const Navbar = () => {
+  const router = useRouter();
+
   return (
     <Box py="4" h="15%">
       <Container>
@@ -42,7 +45,10 @@ const Navbar = () => {
             <Text as="a" href="#" css={style}>
               Contact Us
             </Text>
-            <Button text="sign up" />
+            <Button
+              text="sign up"
+              handleClick={() => router.push("/sign_in")}
+            />
           </Flex>
         </Flex>
       </Container>
